@@ -20,6 +20,9 @@ use ProgrammaticSEO\Cache\Cache_Manager;
 use ProgrammaticSEO\Database\Database_Optimizer;
 use ProgrammaticSEO\Queue\Queue_Manager;
 use ProgrammaticSEO\Monitor\System_Monitor;
+use ProgrammaticSEO\SEO\Technical_SEO_Automation;
+use ProgrammaticSEO\AI\AI_Content_Optimizer;
+use ProgrammaticSEO\Reports\Advanced_Reporting;
 
 /**
  * Class Programmatic_SEO
@@ -125,6 +128,27 @@ class Programmatic_SEO {
 	public $system_monitor;
 
 	/**
+	 * Technical SEO Automation instance
+	 *
+	 * @var Technical_SEO_Automation
+	 */
+	public $technical_seo;
+
+	/**
+	 * AI Content Optimizer instance
+	 *
+	 * @var AI_Content_Optimizer
+	 */
+	public $ai_optimizer;
+
+	/**
+	 * Advanced Reporting instance
+	 *
+	 * @var Advanced_Reporting
+	 */
+	public $reports_manager;
+
+	/**
 	 * Get plugin instance
 	 *
 	 * @return self
@@ -163,6 +187,9 @@ class Programmatic_SEO {
 		require_once PSEO_PLUGIN_DIR . 'includes/Database/Database_Optimizer.php';
 		require_once PSEO_PLUGIN_DIR . 'includes/Queue/Queue_Manager.php';
 		require_once PSEO_PLUGIN_DIR . 'includes/Monitor/System_Monitor.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/SEO/Technical_SEO_Automation.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/AI/AI_Content_Optimizer.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/Reports/Advanced_Reporting.php';
 		require_once PSEO_PLUGIN_DIR . 'includes/Helpers/Helper_Functions.php';
 	}
 
@@ -196,6 +223,11 @@ class Programmatic_SEO {
 		$this->db_optimizer          = new Database_Optimizer();
 		$this->queue_manager         = new Queue_Manager();
 		$this->system_monitor        = new System_Monitor();
+
+		// Intelligence & Reporting modules (Phase 2)
+		$this->technical_seo         = new Technical_SEO_Automation();
+		$this->ai_optimizer          = new AI_Content_Optimizer();
+		$this->reports_manager       = new Advanced_Reporting();
 	}
 
 	/**
