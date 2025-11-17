@@ -26,6 +26,9 @@ use ProgrammaticSEO\Reports\Advanced_Reporting;
 use ProgrammaticSEO\Analytics\Predictive_Analytics;
 use ProgrammaticSEO\Linking\Advanced_Internal_Linking;
 use ProgrammaticSEO\Competitive\Competitor_Monitor;
+use ProgrammaticSEO\Multilingual\Multilingual_Manager;
+use ProgrammaticSEO\Automation\Workflow_Automation;
+use ProgrammaticSEO\Dashboard\Analytics_Dashboard;
 
 /**
  * Class Programmatic_SEO
@@ -173,6 +176,27 @@ class Programmatic_SEO {
 	public $competitor_monitor;
 
 	/**
+	 * Multilingual Manager instance
+	 *
+	 * @var Multilingual_Manager
+	 */
+	public $multilingual_manager;
+
+	/**
+	 * Workflow Automation instance
+	 *
+	 * @var Workflow_Automation
+	 */
+	public $workflow_automation;
+
+	/**
+	 * Analytics Dashboard instance
+	 *
+	 * @var Analytics_Dashboard
+	 */
+	public $analytics_dashboard;
+
+	/**
 	 * Get plugin instance
 	 *
 	 * @return self
@@ -217,6 +241,9 @@ class Programmatic_SEO {
 		require_once PSEO_PLUGIN_DIR . 'includes/Analytics/Predictive_Analytics.php';
 		require_once PSEO_PLUGIN_DIR . 'includes/Linking/Advanced_Internal_Linking.php';
 		require_once PSEO_PLUGIN_DIR . 'includes/Competitive/Competitor_Monitor.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/Multilingual/Multilingual_Manager.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/Automation/Workflow_Automation.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/Dashboard/Analytics_Dashboard.php';
 		require_once PSEO_PLUGIN_DIR . 'includes/Helpers/Helper_Functions.php';
 	}
 
@@ -260,6 +287,11 @@ class Programmatic_SEO {
 		$this->predictive_analytics  = new Predictive_Analytics();
 		$this->advanced_linking      = new Advanced_Internal_Linking();
 		$this->competitor_monitor    = new Competitor_Monitor();
+
+		// Enterprise & Scalability modules (Phase 4)
+		$this->multilingual_manager  = new Multilingual_Manager();
+		$this->workflow_automation   = new Workflow_Automation();
+		$this->analytics_dashboard   = new Analytics_Dashboard();
 	}
 
 	/**
