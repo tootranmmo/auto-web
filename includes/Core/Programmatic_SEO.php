@@ -23,6 +23,9 @@ use ProgrammaticSEO\Monitor\System_Monitor;
 use ProgrammaticSEO\SEO\Technical_SEO_Automation;
 use ProgrammaticSEO\AI\AI_Content_Optimizer;
 use ProgrammaticSEO\Reports\Advanced_Reporting;
+use ProgrammaticSEO\Analytics\Predictive_Analytics;
+use ProgrammaticSEO\Linking\Advanced_Internal_Linking;
+use ProgrammaticSEO\Competitive\Competitor_Monitor;
 
 /**
  * Class Programmatic_SEO
@@ -149,6 +152,27 @@ class Programmatic_SEO {
 	public $reports_manager;
 
 	/**
+	 * Predictive Analytics instance
+	 *
+	 * @var Predictive_Analytics
+	 */
+	public $predictive_analytics;
+
+	/**
+	 * Advanced Internal Linking instance
+	 *
+	 * @var Advanced_Internal_Linking
+	 */
+	public $advanced_linking;
+
+	/**
+	 * Competitor Monitor instance
+	 *
+	 * @var Competitor_Monitor
+	 */
+	public $competitor_monitor;
+
+	/**
 	 * Get plugin instance
 	 *
 	 * @return self
@@ -190,6 +214,9 @@ class Programmatic_SEO {
 		require_once PSEO_PLUGIN_DIR . 'includes/SEO/Technical_SEO_Automation.php';
 		require_once PSEO_PLUGIN_DIR . 'includes/AI/AI_Content_Optimizer.php';
 		require_once PSEO_PLUGIN_DIR . 'includes/Reports/Advanced_Reporting.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/Analytics/Predictive_Analytics.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/Linking/Advanced_Internal_Linking.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/Competitive/Competitor_Monitor.php';
 		require_once PSEO_PLUGIN_DIR . 'includes/Helpers/Helper_Functions.php';
 	}
 
@@ -228,6 +255,11 @@ class Programmatic_SEO {
 		$this->technical_seo         = new Technical_SEO_Automation();
 		$this->ai_optimizer          = new AI_Content_Optimizer();
 		$this->reports_manager       = new Advanced_Reporting();
+
+		// Forecasting & Competitive modules (Phase 3)
+		$this->predictive_analytics  = new Predictive_Analytics();
+		$this->advanced_linking      = new Advanced_Internal_Linking();
+		$this->competitor_monitor    = new Competitor_Monitor();
 	}
 
 	/**
