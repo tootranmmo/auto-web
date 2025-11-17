@@ -1,0 +1,440 @@
+/**
+ * Programmatic SEO Admin Styles
+ */
+
+/* General Layout */
+.pseo-row {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.pseo-col-4 {
+    flex: 0 0 calc(33.333% - 14px);
+}
+
+.pseo-col-6 {
+    flex: 0 0 calc(50% - 10px);
+}
+
+.pseo-col-8 {
+    flex: 0 0 calc(66.666% - 14px);
+}
+
+@media (max-width: 782px) {
+    .pseo-row {
+        flex-direction: column;
+    }
+
+    .pseo-col-4,
+    .pseo-col-6,
+    .pseo-col-8 {
+        flex: 0 0 100%;
+    }
+}
+
+/* Cards */
+.pseo-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.pseo-card h2 {
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #dcdcde;
+    padding-bottom: 10px;
+}
+
+.pseo-card h3 {
+    margin: 15px 0 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Dashboard Stats */
+.pseo-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.pseo-stat-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-left: 4px solid #2271b1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pseo-stat-icon {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #2271b1;
+}
+
+.pseo-stat-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #646970;
+    font-weight: normal;
+}
+
+.pseo-stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1d2327;
+    line-height: 1;
+}
+
+.pseo-stat-label {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+    color: #646970;
+}
+
+/* Quick Actions */
+.pseo-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.pseo-quick-actions .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    height: auto;
+}
+
+.pseo-quick-actions .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Badges */
+.pseo-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #f0f0f1;
+    color: #2c3338;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.pseo-badge-publish,
+.pseo-badge-active {
+    background: #00a32a;
+    color: #fff;
+}
+
+.pseo-badge-draft,
+.pseo-badge-pending {
+    background: #dba617;
+    color: #fff;
+}
+
+.pseo-badge-failed {
+    background: #d63638;
+    color: #fff;
+}
+
+/* Empty State */
+.pseo-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f6f7f7;
+    border: 2px dashed #c3c4c7;
+    border-radius: 4px;
+}
+
+.pseo-empty-icon {
+    font-size: 80px;
+    width: 80px;
+    height: 80px;
+    color: #c3c4c7;
+    margin: 0 auto 20px;
+}
+
+.pseo-empty-state h2 {
+    color: #50575e;
+    margin: 0 0 10px 0;
+}
+
+.pseo-empty-state p {
+    color: #646970;
+    margin: 0 0 20px 0;
+}
+
+/* Progress Bar */
+.pseo-progress-bar {
+    width: 100%;
+    height: 30px;
+    background: #f0f0f1;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.pseo-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2271b1, #135e96);
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+.pseo-progress-text {
+    text-align: center;
+    font-weight: 600;
+    color: #2271b1;
+}
+
+.pseo-progress-status {
+    text-align: center;
+    color: #646970;
+}
+
+/* Template Variables Helper */
+.pseo-variables-help {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.pseo-help-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.pseo-help-section li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.pseo-help-section code {
+    background: #f6f7f7;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #d63638;
+}
+
+/* Getting Started */
+.pseo-getting-started ol {
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+}
+
+.pseo-getting-started li {
+    counter-increment: step-counter;
+    margin: 20px 0;
+    padding-left: 50px;
+    position: relative;
+}
+
+.pseo-getting-started li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    background: #2271b1;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.pseo-getting-started strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #1d2327;
+}
+
+.pseo-getting-started p {
+    margin: 0;
+    color: #646970;
+}
+
+/* Tips */
+.pseo-tips {
+    background: #f6f7f7;
+    border-left: 4px solid #2271b1;
+}
+
+.pseo-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.pseo-tips li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+}
+
+.pseo-tips li::before {
+    content: "💡";
+    position: absolute;
+    left: 0;
+}
+
+/* Stats */
+.pseo-stat-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.pseo-stat-item:last-child {
+    border-bottom: none;
+}
+
+.pseo-stat-label {
+    font-size: 13px;
+    color: #646970;
+    margin-bottom: 5px;
+}
+
+.pseo-stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2271b1;
+}
+
+/* Recent Imports */
+.pseo-recent-imports {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.pseo-recent-imports li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.pseo-recent-imports li:last-child {
+    border-bottom: none;
+}
+
+/* Top Posts */
+.pseo-top-posts {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.pseo-top-posts li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pseo-top-posts li:last-child {
+    border-bottom: none;
+}
+
+.pseo-link-count {
+    background: #2271b1;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Form Table Overrides */
+.pseo-card .form-table th {
+    padding: 15px 10px 15px 0;
+    width: 200px;
+}
+
+.pseo-card .form-table td {
+    padding: 15px 10px;
+}
+
+/* Buttons */
+.button .dashicons {
+    margin-top: -3px;
+}
+
+/* Next Scheduled */
+.pseo-next-scheduled p {
+    margin: 10px 0;
+}
+
+/* Responsive Tables */
+@media (max-width: 782px) {
+    .wp-list-table {
+        font-size: 14px;
+    }
+
+    .wp-list-table th,
+    .wp-list-table td {
+        padding: 8px;
+    }
+}
+
+/* Loading Spinner */
+.pseo-loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #2271b1;
+    animation: pseo-spin 1s ease-in-out infinite;
+}
+
+@keyframes pseo-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Utility Classes */
+.pseo-mt-20 {
+    margin-top: 20px;
+}
+
+.pseo-mb-20 {
+    margin-bottom: 20px;
+}
+
+.pseo-text-center {
+    text-align: center;
+}
+
+.pseo-text-muted {
+    color: #646970;
+}
+
+.pseo-text-success {
+    color: #00a32a;
+}
+
+.pseo-text-error {
+    color: #d63638;
+}

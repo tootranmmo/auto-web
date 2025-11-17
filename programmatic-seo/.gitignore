@@ -1,0 +1,27 @@
+# WordPress
+*.log
+.htaccess
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Composer
+/vendor/
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
