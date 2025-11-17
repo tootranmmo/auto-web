@@ -393,37 +393,4 @@ class Programmatic_SEO {
 		);
 	}
 
-	/**
-	 * Activate plugin
-	 */
-	public static function activate() {
-		// Create database tables
-		Database_Manager::create_tables();
-
-		// Flush rewrite rules
-		flush_rewrite_rules();
-
-		// Set initial plugin options
-		update_option( 'pseo_plugin_activated', true );
-	}
-
-	/**
-	 * Deactivate plugin
-	 */
-	public static function deactivate() {
-		// Flush rewrite rules
-		flush_rewrite_rules();
-	}
-
-	/**
-	 * Uninstall plugin
-	 */
-	public static function uninstall() {
-		// Drop database tables
-		Database_Manager::drop_tables();
-
-		// Delete options
-		delete_option( 'pseo_plugin_activated' );
-		delete_option( 'pseo_settings' );
-	}
 }
