@@ -1,0 +1,267 @@
+/* Programmatic SEO Frontend Styles */
+
+/* Programmatic SEO page styles */
+.pseo-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.pseo-page h1 {
+    color: #0073aa;
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.pseo-page h2 {
+    color: #0073aa;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.pseo-page h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.pseo-page p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.pseo-page a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.pseo-page a:hover {
+    text-decoration: underline;
+}
+
+/* Internal links */
+.pseo-internal-links {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 4px solid #0073aa;
+}
+
+.pseo-internal-links h3 {
+    margin-top: 0;
+    color: #0073aa;
+}
+
+.pseo-internal-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pseo-internal-links li {
+    margin-bottom: 8px;
+}
+
+.pseo-internal-links a {
+    display: inline-block;
+    padding: 5px 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.pseo-internal-links a:hover {
+    background: #0073aa;
+    color: white;
+    border-color: #0073aa;
+    text-decoration: none;
+}
+
+/* Related pages */
+.pseo-related-pages {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 30px 0;
+}
+
+.pseo-related-pages h3 {
+    margin-top: 0;
+    color: #0073aa;
+}
+
+.pseo-related-pages-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.pseo-related-pages-item {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.pseo-related-pages-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-color: #0073aa;
+}
+
+.pseo-related-pages-item a {
+    display: block;
+    font-weight: 600;
+    color: #0073aa;
+    margin-bottom: 5px;
+}
+
+.pseo-related-pages-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* HTML Sitemap */
+.pseo-html-sitemap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.pseo-html-sitemap h1 {
+    color: #0073aa;
+    margin-bottom: 20px;
+}
+
+.pseo-html-sitemap ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pseo-html-sitemap li {
+    padding: 5px 0;
+    margin-left: 20px;
+}
+
+.pseo-html-sitemap li::before {
+    content: '→';
+    margin-right: 10px;
+    color: #0073aa;
+}
+
+.pseo-html-sitemap a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.pseo-html-sitemap a:hover {
+    text-decoration: underline;
+}
+
+/* Breadcrumbs */
+.pseo-breadcrumbs {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.pseo-breadcrumbs a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.pseo-breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.pseo-breadcrumbs span {
+    margin: 0 5px;
+    color: #666;
+}
+
+/* Content box */
+.pseo-content-box {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.pseo-content-box h3 {
+    margin-top: 0;
+    color: #0073aa;
+}
+
+/* List styles */
+.pseo-page ul,
+.pseo-page ol {
+    margin-bottom: 15px;
+    padding-left: 30px;
+}
+
+.pseo-page li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Blockquote */
+.pseo-page blockquote {
+    border-left: 4px solid #0073aa;
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: #f9f9f9;
+    font-style: italic;
+}
+
+/* Tables */
+.pseo-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.pseo-page table th,
+.pseo-page table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.pseo-page table th {
+    background: #f5f5f5;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pseo-page {
+        padding: 15px;
+    }
+
+    .pseo-page h1 {
+        font-size: 24px;
+    }
+
+    .pseo-page h2 {
+        font-size: 20px;
+    }
+
+    .pseo-related-pages-list {
+        grid-template-columns: 1fr;
+    }
+
+    .pseo-page table {
+        font-size: 14px;
+    }
+
+    .pseo-page table th,
+    .pseo-page table td {
+        padding: 8px;
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "programmatic-seo/wordpress-plugin",
+  "description": "WordPress plugin for Programmatic SEO",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Auto Web",
+      "email": "info@example.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "ProgrammaticSEO\\": "includes/"
+    }
+  }
+}

@@ -1,0 +1,151 @@
+/* Programmatic SEO Admin Styles */
+
+.pseo-dashboard {
+    margin-top: 20px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-cards .card {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.dashboard-cards .card h3 {
+    margin-top: 0;
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+}
+
+.dashboard-cards .card .number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0073aa;
+    margin: 15px 0;
+}
+
+.dashboard-info {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.dashboard-info h2 {
+    margin-top: 0;
+    color: #0073aa;
+}
+
+.dashboard-info ol {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.dashboard-info li {
+    margin-bottom: 10px;
+}
+
+/* Tables */
+.wp-list-table {
+    margin-top: 20px;
+}
+
+.wp-list-table th,
+.wp-list-table td {
+    padding: 12px;
+}
+
+.wp-list-table code {
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Forms */
+.form-table {
+    margin-top: 20px;
+}
+
+.form-table th {
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+    background: #f9f9f9;
+}
+
+.form-table td {
+    padding: 15px;
+}
+
+/* Buttons */
+.button {
+    padding: 8px 16px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover {
+    background: #f0f0f0;
+}
+
+.button-primary {
+    background: #0073aa;
+    color: white;
+    border-color: #0073aa;
+}
+
+.button-primary:hover {
+    background: #005a87;
+    border-color: #005a87;
+}
+
+/* Alerts */
+.notice {
+    margin: 20px 0;
+    padding: 12px;
+    border-left: 4px solid #dc3545;
+    background: #fff5f5;
+    border-radius: 3px;
+}
+
+.notice-success {
+    border-left-color: #28a745;
+    background: #f5fff9;
+}
+
+.notice-info {
+    border-left-color: #0073aa;
+    background: #f5f9ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .wp-list-table {
+        font-size: 12px;
+    }
+
+    .wp-list-table th,
+    .wp-list-table td {
+        padding: 8px;
+    }
+}

@@ -1,0 +1,49 @@
+# Programmatic SEO Plugin .gitignore
+
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/plugins/*/
+wp-content/themes/*/
+wp-content/backup-*
+wp-content/cache/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.sublime-project
+.sublime-workspace
+
+# Dependencies
+/vendor/
+/node_modules/
+composer.lock
+package-lock.json
+
+# Logs
+logs/
+debug.log
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+.tmp/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Testing
+/tests/coverage/
+.phpunit.result.cache
