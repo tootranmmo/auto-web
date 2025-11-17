@@ -16,6 +16,10 @@ use ProgrammaticSEO\Schema\Schema_Generator;
 use ProgrammaticSEO\Linking\Internal_Link_Manager;
 use ProgrammaticSEO\Sitemap\Sitemap_Generator;
 use ProgrammaticSEO\Analytics\Analytics_Manager;
+use ProgrammaticSEO\Cache\Cache_Manager;
+use ProgrammaticSEO\Database\Database_Optimizer;
+use ProgrammaticSEO\Queue\Queue_Manager;
+use ProgrammaticSEO\Monitor\System_Monitor;
 
 /**
  * Class Programmatic_SEO
@@ -93,6 +97,34 @@ class Programmatic_SEO {
 	public $analytics_manager;
 
 	/**
+	 * Cache Manager instance
+	 *
+	 * @var Cache_Manager
+	 */
+	public $cache_manager;
+
+	/**
+	 * Database Optimizer instance
+	 *
+	 * @var Database_Optimizer
+	 */
+	public $db_optimizer;
+
+	/**
+	 * Queue Manager instance
+	 *
+	 * @var Queue_Manager
+	 */
+	public $queue_manager;
+
+	/**
+	 * System Monitor instance
+	 *
+	 * @var System_Monitor
+	 */
+	public $system_monitor;
+
+	/**
 	 * Get plugin instance
 	 *
 	 * @return self
@@ -127,6 +159,10 @@ class Programmatic_SEO {
 		require_once PSEO_PLUGIN_DIR . 'includes/Linking/Internal_Link_Manager.php';
 		require_once PSEO_PLUGIN_DIR . 'includes/Sitemap/Sitemap_Generator.php';
 		require_once PSEO_PLUGIN_DIR . 'includes/Analytics/Analytics_Manager.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/Cache/Cache_Manager.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/Database/Database_Optimizer.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/Queue/Queue_Manager.php';
+		require_once PSEO_PLUGIN_DIR . 'includes/Monitor/System_Monitor.php';
 		require_once PSEO_PLUGIN_DIR . 'includes/Helpers/Helper_Functions.php';
 	}
 
@@ -144,6 +180,7 @@ class Programmatic_SEO {
 	 * Initialize all modules
 	 */
 	private function init_modules() {
+		// Core modules
 		$this->admin_dashboard       = new Admin_Dashboard();
 		$this->template_manager      = new Template_Manager();
 		$this->data_source_manager   = new Data_Source_Manager();
@@ -153,6 +190,12 @@ class Programmatic_SEO {
 		$this->internal_link_manager = new Internal_Link_Manager();
 		$this->sitemap_generator     = new Sitemap_Generator();
 		$this->analytics_manager     = new Analytics_Manager();
+
+		// Performance & Monitoring modules (Phase 1)
+		$this->cache_manager         = new Cache_Manager();
+		$this->db_optimizer          = new Database_Optimizer();
+		$this->queue_manager         = new Queue_Manager();
+		$this->system_monitor        = new System_Monitor();
 	}
 
 	/**
