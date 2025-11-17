@@ -35,7 +35,7 @@ class Workflow_Automation {
 		$this->workflows_table = $wpdb->prefix . 'pseo_workflows';
 		$this->executions_table = $wpdb->prefix . 'pseo_workflow_executions';
 
-		$this->create_tables();
+		add_action( 'admin_init', array( $this, 'create_tables' ) );
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
 		add_action( 'pseo_workflow_trigger', array( $this, 'execute_triggered_workflows' ) );
 	}
@@ -43,7 +43,7 @@ class Workflow_Automation {
 	/**
 	 * Create necessary database tables
 	 */
-	private function create_tables() {
+	public function create_tables() {
 		global $wpdb;
 
 		$charset_collate = $wpdb->get_charset_collate();

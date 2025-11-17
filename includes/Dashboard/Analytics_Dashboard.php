@@ -51,7 +51,7 @@ class Analytics_Dashboard {
 		$this->conversions_table = $wpdb->prefix . 'pseo_conversions';
 		$this->heatmaps_table = $wpdb->prefix . 'pseo_heatmaps';
 
-		$this->create_tables();
+		add_action( 'admin_init', array( $this, 'create_tables' ) );
 		add_action( 'wp_footer', array( $this, 'load_tracking_script' ) );
 		add_action( 'wp_ajax_nopriv_pseo_track_event', array( $this, 'track_event_ajax' ) );
 		add_action( 'wp_ajax_pseo_track_event', array( $this, 'track_event_ajax' ) );
@@ -60,7 +60,7 @@ class Analytics_Dashboard {
 	/**
 	 * Create necessary database tables
 	 */
-	private function create_tables() {
+	public function create_tables() {
 		global $wpdb;
 
 		$charset_collate = $wpdb->get_charset_collate();
